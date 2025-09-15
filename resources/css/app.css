@@ -1,3 +1,99 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Component Styles */
+@layer components {
+    /* Enhanced Button Styling */
+    .btn-primary {
+        @apply bg-navy-950 hover:bg-navy-800 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:ring-2 focus:ring-beige-500 focus:ring-offset-2;
+    }
+    
+    .btn-secondary {
+        @apply bg-beige-100 hover:bg-beige-200 text-navy-950 font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 border border-beige-300;
+    }
+    
+    /* Card Styling */
+    .card {
+        @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-beige-200;
+    }
+    
+    /* Form Input Styling */
+    .form-input {
+        @apply border-beige-300 focus:border-navy-500 focus:ring-navy-500 rounded-lg shadow-sm bg-white;
+    }
+    
+    /* Navigation Enhancement */
+    .nav-gradient {
+        background: linear-gradient(135deg, rgba(17, 34, 80, 0.95) 0%, rgba(17, 34, 80, 0.8) 100%);
+        backdrop-filter: blur(10px);
+    }
+    
+    /* Hero Section Background */
+    .hero-gradient {
+        background: linear-gradient(135deg, #112250 0%, rgba(17, 34, 80, 0.9) 50%, rgba(216, 193, 141, 0.1) 100%);
+    }
+}
+
+/* Custom Utilities */
+@layer utilities {
+    /* Text Gradients */
+    .text-gradient-navy {
+        background: linear-gradient(135deg, #112250 0%, #1e3a72 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .text-gradient-beige {
+        background: linear-gradient(135deg, #d8c18d 0%, #c5a873 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    /* Custom Shadows */
+    .shadow-navy {
+        box-shadow: 0 10px 25px -5px rgba(17, 34, 80, 0.1), 0 4px 6px -2px rgba(17, 34, 80, 0.05);
+    }
+    
+    .shadow-beige {
+        box-shadow: 0 10px 25px -5px rgba(216, 193, 141, 0.2), 0 4px 6px -2px rgba(216, 193, 141, 0.1);
+    }
+    
+    /* Hover Animations */
+    .hover-lift {
+        @apply transform transition-transform duration-200 hover:-translate-y-1;
+    }
+    
+    .hover-scale {
+        @apply transform transition-transform duration-200 hover:scale-105;
+    }
+}
+
+/* Enhanced Form Styling */
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    @apply form-input;
+}
+
+/* Enhanced Typography */
+h1, h2, h3, h4, h5, h6 {
+    @apply text-navy-950;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-beige-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-navy-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-navy-500;
+}
