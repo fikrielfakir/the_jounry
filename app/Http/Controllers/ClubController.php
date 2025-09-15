@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Club;
 
 class ClubController extends Controller
 {
@@ -11,7 +12,11 @@ class ClubController extends Controller
      */
     public function index()
     {
-        //
+        $clubs = Club::with('members')
+            ->active()
+            ->paginate(12);
+
+        return view('clubs.index', compact('clubs'));
     }
 
     /**
@@ -33,9 +38,13 @@ class ClubController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Club $club)
     {
-        //
+        $club->load(['members', 'events' => function($query) {
+            $query->published()->upcoming()->orderBy('event_date');
+        }]);
+
+        return view('clubs.show', compact('club'));
     }
 
     /**
