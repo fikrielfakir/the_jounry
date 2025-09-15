@@ -13,6 +13,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                playfair: ['Playfair Display', ...defaultTheme.fontFamily.serif],
             },
             colors: {
                 navy: {
