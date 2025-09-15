@@ -1,37 +1,48 @@
 {{-- Hero Section --}}
-<section id="hero" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
-    {{-- Background Image Overlay --}}
-    <div class="absolute inset-0 bg-black opacity-40"></div>
-    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')] bg-cover bg-center bg-no-repeat"></div>
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-purple-900/70 to-indigo-900/70"></div>
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    {{-- Background Image with Architecture --}}
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80')] bg-cover bg-center bg-no-repeat"></div>
     
-    {{-- Animated Background Elements --}}
-    <div class="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full animate-float"></div>
-    <div class="absolute top-40 right-32 w-20 h-20 bg-blue-400/20 rounded-full animate-bounce delay-1000"></div>
-    <div class="absolute bottom-32 left-1/4 w-24 h-24 bg-purple-400/20 rounded-full animate-pulse delay-2000"></div>
+    {{-- Navy Blue Overlay with Gradient --}}
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-950/80 via-navy-900/70 to-navy-800/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent"></div>
+    
+    {{-- Elegant Pattern Overlay (Bottom) --}}
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy-950/90 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-repeat-x opacity-20" style="background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 20&quot;><polygon points=&quot;0,20 50,0 100,20&quot; fill=&quot;%23d8c18d&quot;/></svg>')"></div>
     
     {{-- Hero Content --}}
-    <div class="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
-        <h1 class="font-playfair text-7xl md:text-9xl font-bold mb-6 leading-tight animate-slide-in-left">
-            Association
-        </h1>
-        <h2 class="font-playfair text-5xl md:text-7xl font-bold mb-8 text-blue-200 animate-slide-in-right delay-500">
+    <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-20">
+        {{-- Association Label --}}
+        <div class="mb-4">
+            <p class="text-beige-200 text-lg font-light tracking-widest uppercase">
+                Association
+            </p>
+        </div>
+        
+        {{-- Main Title --}}
+        <h1 class="font-playfair text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight tracking-wide text-white">
             THE JOURNEY
-        </h2>
-        <p class="text-2xl md:text-3xl mb-12 font-light max-w-4xl mx-auto leading-relaxed opacity-0 animate-fade-in delay-1000">
-            Awakening Through Adventure
+        </h1>
+        
+        {{-- Subtitle --}}
+        <p class="text-xl md:text-2xl mb-12 font-light text-beige-100 max-w-2xl mx-auto leading-relaxed">
+            Where adventure meets enlightenment
         </p>
-        <a href="#discover" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 rounded-full font-semibold text-xl transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-blue-500/50 opacity-0 animate-fade-in delay-1500">
-            <i class="fas fa-compass mr-3"></i>
-            Our Story
-        </a>
+        
+        {{-- Call to Action Button --}}
+        <div class="mb-16">
+            <a href="#discover" class="inline-block bg-navy-950/80 hover:bg-navy-950 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-beige-500/20 hover:border-beige-500/40 backdrop-blur-sm">
+                Our Story
+            </a>
+        </div>
     </div>
     
     {{-- Scroll Indicator --}}
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-beige-200 animate-bounce">
         <div class="flex flex-col items-center space-y-2">
             <span class="text-sm font-light">Scroll Down</span>
-            <i class="fas fa-chevron-down text-3xl"></i>
+            <i class="fas fa-chevron-down text-xl"></i>
         </div>
     </div>
 </section>
