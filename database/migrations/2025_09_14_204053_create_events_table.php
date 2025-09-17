@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->text('short_description')->nullable(); // For cards/listings
             $table->date('event_date')->index();
             $table->time('event_time')->nullable();
-            $table->datetime('event_datetime')->storedAs('CONCAT(event_date, " ", COALESCE(event_time, "00:00:00"))')->index();
+            $table->datetime('event_datetime')->storedAs('(event_date + COALESCE(event_time, \'00:00:00\'::time))')->index();
             $table->string('location')->nullable();
             $table->json('location_details')->nullable(); // Store coordinates, venue info
             $table->integer('max_participants')->default(0);
